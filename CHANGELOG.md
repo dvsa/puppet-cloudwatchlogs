@@ -1,3 +1,7 @@
+## 2019-03-20 - Release 3.2.2
+### Summary
+Small bugfix
+
 ## 2016-12-04 - Release 3.2.1
 ### Summary
 Small bugfix release.
