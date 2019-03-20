@@ -157,7 +157,7 @@ class cloudwatchlogs (
           path    => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
           command => "python /usr/local/src/awslogs-agent-setup.py -n -r ${region} -c /etc/awslogs/awslogs.conf",
           onlyif  => '[ -e /usr/local/src/awslogs-agent-setup.py ]',
-          unless  => '[ -d /var/awslogs/bin ]',
+          unless  => '[ -f /var/awslogs/bin/python ]',
           require => [
             Concat['/etc/awslogs/awslogs.conf'],
             Exec['cloudwatchlogs-wget']
